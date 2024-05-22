@@ -232,6 +232,18 @@ export default function Header() {
             >
               <i className="fa-solid fa-xmark text-[25px]"></i>
             </button>
+
+            <button
+              className="text-[15px] hover:text-[blue] p-[10px]"
+              style={{ color: currentPath === "/about-us" ? "blue" : "" }}
+              onClick={() => {
+                router.push("/title-case-converter");
+                setMobileMenu(false);
+              }}
+            >
+              Case Converter
+            </button>
+
             <button
               className="text-[15px] hover:text-[blue] p-[10px]"
               style={{ color: currentPath === "/about-us" ? "blue" : "" }}

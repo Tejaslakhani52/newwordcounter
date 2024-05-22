@@ -46,17 +46,22 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
           rel="stylesheet"
         ></link>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-42GPKPH6MR"
+        ></script>
+
+        <meta
+          name="google-site-verification"
+          content="L6aG5-1IxMC-XrlotE0iqwY6MkUC2AT9nLAAqIX1brQ"
+        />
       </Head>
 
       <body
         className={`bg-[#f6f8fa]`}
         style={{ fontFamily: "'Inter', sans-serif", overflowX: "hidden" }}
       >
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-42GPKPH6MR"
-        ></script>
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -67,12 +72,6 @@ export default function Document() {
         `,
           }}
         />
-
-        <meta
-          name="google-site-verification"
-          content="L6aG5-1IxMC-XrlotE0iqwY6MkUC2AT9nLAAqIX1brQ"
-        />
-
         <Main />
         <NextScript />
       </body>

@@ -206,6 +206,7 @@ export default function ActionBox({
                   item?.value === caseType ? "1px solid rgb(226 232 240)" : "",
                 borderRadius: "4px",
                 opacity: "0.7",
+                textAlign: "left",
               }}
             >
               {item?.name}

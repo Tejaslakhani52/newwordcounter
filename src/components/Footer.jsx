@@ -42,10 +42,19 @@ export default function Footer() {
 
             <li>
               <p
-                className=" underline cursor-pointer"
+                className="mr-4 underline md:mr-6 cursor-pointer"
                 onClick={() => router.push("/contact")}
               >
                 Contact
+              </p>
+            </li>
+
+            <li>
+              <p
+                className=" underline cursor-pointer"
+                onClick={() => router.push("/about-us")}
+              >
+                About Us
               </p>
             </li>
           </ul>
@@ -54,7 +63,7 @@ export default function Footer() {
         <span className="block text-sm text-gray-500 sm:text-center">
           © {currentYear}{" "}
           <a href="https://counttheword.com/" className="hover:underline">
-            Wordcounter
+            counttheword
           </a>
           . All Rights Reserved.
         </span>

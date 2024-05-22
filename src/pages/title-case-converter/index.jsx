@@ -95,7 +95,7 @@ export default function index() {
                 width: "100%",
                 height: "450px",
                 padding: "20px",
-                fontSize: "18px",
+                fontSize: "16px",
               }}
               onChange={(e) => {
                 const newText = e.target.value;
@@ -175,6 +175,7 @@ export default function index() {
                       borderRadius: "4px",
                       opacity: "0.7",
                     }}
+                    className="max-sm:w-[48%]"
                   >
                     {item?.name}
                   </button>

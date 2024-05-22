@@ -9,6 +9,8 @@ export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [openCompanyInfo, setOpenCompanyInfo] = useState(false);
   const [openTools, setOpenTools] = useState(false);
+  const [openToolsMobile, setOpenToolsMobile] = useState(false);
+  const [openCompanyInfoMobile, setOpenCompanyInfoMobile] = useState(false);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -233,57 +235,91 @@ export default function Header() {
               <i className="fa-solid fa-xmark text-[25px]"></i>
             </button>
 
-            <button
-              className="text-[15px] hover:text-[blue] p-[10px]"
-              style={{ color: currentPath === "/about-us" ? "blue" : "" }}
-              onClick={() => {
-                router.push("/title-case-converter");
-                setMobileMenu(false);
-              }}
-            >
-              Case Converter
-            </button>
+            <div style={{ width: "100%", marginBottom: "20px" }}>
+              <div
+                onClick={() => setOpenToolsMobile(!openToolsMobile)}
+                className="w-full"
+              >
+                <button
+                  type="button"
+                  class="inline-flex font-semibold w-full justify-end gap-x-1.5 bg-white px-3 py-2 text-[17px]  hover:bg-gray-50"
+                  id="menu-button"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                >
+                  Tools
+                </button>
+              </div>
 
-            <button
-              className="text-[15px] hover:text-[blue] p-[10px]"
-              style={{ color: currentPath === "/about-us" ? "blue" : "" }}
-              onClick={() => {
-                router.push("/about-us");
-              }}
-            >
-              About
-            </button>
+              <button
+                className="text-[15px] hover:text-[blue] p-[10px] w-full text-right"
+                style={{ color: currentPath === "/about-us" ? "blue" : "" }}
+                onClick={() => {
+                  router.push("/title-case-converter");
+                  setMobileMenu(false);
+                }}
+              >
+                Case Converter
+              </button>
+            </div>
 
-            <button
-              className="text-[15px] hover:text-[blue] p-[10px]"
-              style={{ color: currentPath === "/faqs" ? "blue" : "" }}
-              onClick={() => {
-                router.push("/faqs");
-                setMobileMenu(false);
-              }}
-            >
-              FAQ
-            </button>
-            <button
-              className="text-[15px] hover:text-[blue]  p-[10px]"
-              style={{ color: currentPath === "/privacy-policy" ? "blue" : "" }}
-              onClick={() => {
-                router.push("/privacy-policy");
-                setMobileMenu(false);
-              }}
-            >
-              Privacy Policy
-            </button>
-            <button
-              className="text-[15px] hover:text-[blue]  p-[10px]"
-              style={{ color: currentPath === "/contact" ? "blue" : "" }}
-              onClick={() => {
-                router.push("/contact");
-                setMobileMenu(false);
-              }}
-            >
-              Contact
-            </button>
+            <div style={{ width: "100%" }}>
+              <div>
+                <button
+                  type="button"
+                  class="inline-flex mb-3 font-semibold w-full justify-end gap-x-1.5 bg-white px-3 py-2 text-[17px] hover:bg-gray-50"
+                  id="menu-button"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                >
+                  Company Info
+                </button>
+              </div>
+              <div>
+                <button
+                  className="text-[15px] text-right mb-1 w-full hover:text-[blue] p-[10px]"
+                  style={{ color: currentPath === "/about-us" ? "blue" : "" }}
+                  onClick={() => {
+                    router.push("/about-us");
+                  }}
+                >
+                  About
+                </button>
+
+                <button
+                  className="text-[15px] text-right mb-1 w-full hover:text-[blue] p-[10px]"
+                  style={{ color: currentPath === "/faqs" ? "blue" : "" }}
+                  onClick={() => {
+                    router.push("/faqs");
+                    setMobileMenu(false);
+                  }}
+                >
+                  FAQ
+                </button>
+                <button
+                  className="text-[15px] text-right mb-1 w-full hover:text-[blue]  p-[10px]"
+                  style={{
+                    color: currentPath === "/privacy-policy" ? "blue" : "",
+                  }}
+                  onClick={() => {
+                    router.push("/privacy-policy");
+                    setMobileMenu(false);
+                  }}
+                >
+                  Privacy Policy
+                </button>
+                <button
+                  className="text-[15px] text-right mb-1 w-full hover:text-[blue]  p-[10px]"
+                  style={{ color: currentPath === "/contact" ? "blue" : "" }}
+                  onClick={() => {
+                    router.push("/contact");
+                    setMobileMenu(false);
+                  }}
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
